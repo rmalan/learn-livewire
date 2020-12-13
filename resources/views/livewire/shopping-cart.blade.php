@@ -52,6 +52,9 @@
                     
                 @endforelse
             </ul>
+            @if($cart !== [])
+                <button wire:click="checkout" type="submit" class="btn btn-success mt-2">Checkout</button>
+            @endif
         </div>
     </div>
 </div>

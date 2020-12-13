@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Facades\Cart;
 use App\Models\Category;
 use App\Models\Product;
+use Illuminate\Http\Request;
 use Livewire\Component;
 
 class ShoppingCart extends Component
@@ -85,5 +86,11 @@ class ShoppingCart extends Component
     {
         Cart::remove($productId);
         $this->cart = Cart::get();
+    }
+
+    public function checkout(Request $request)
+    {
+        $request->session()->flush();
+        return redirect()->route('shopping.cart');
     }
 }
