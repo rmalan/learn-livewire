@@ -20,7 +20,7 @@
                         <a class="nav-link" href="{{ route('shopping.cart') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('shopping.cart') }}">Products</a>
+                        <a class="nav-link" href="{{ route('shopping.cart') }}">Shopping Cart</a>
                     </li>
                 </ul>
                 {{-- <ul class="navbar-nav mt-2 mt-lg-0">
